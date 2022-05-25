@@ -39,45 +39,53 @@ class Setting_page extends HookWidget {
             SizedBox(
               height: 40.h,
             ),
-            Container(
-              margin: EdgeInsets.only(left: 20.w, right: 20.w),
-              child: Row(
-                children: [
-                  Container(
-                    height: 70.h,
-                    width: 70.w,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.blueAccent),
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(40.r)),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/mario.png"))),
-                  ),
-                  SizedBox(
-                    width: 10.w,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Obx(
-                        ()=>userinfo.user_info.length !=0? Text(
-                          userinfo.user_info[0].name!,
+            InkWell(
+              onTap: () {
+                Get.to(Update_userinfo());
+              },
+              child: Container(
+                margin: EdgeInsets.only(left: 20.w, right: 20.w),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 70.h,
+                      width: 70.w,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.blueAccent),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(40.r)),
+                          image: DecorationImage(
+                              image: AssetImage("assets/images/mario.png"))),
+                    ),
+                    SizedBox(
+                      width: 10.w,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Obx(
+                          () => userinfo.user_info.length != 0
+                              ? Text(
+                                  userinfo.user_info[0].name!,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 25.sp),
+                                )
+                              : Text(""),
+                        ),
+                        Text(
+                          "Edit personl details",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 25.sp),
-                        ):Text(""),
-                      ),
-                      Text(
-                        "Edit personl details",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 21.sp,
-                            color: Colors.black54),
-                      ),
-                    ],
-                  ),
-                  Expanded(child: Container()),
-                  Icon(Icons.arrow_forward_ios),
-                ],
+                              fontWeight: FontWeight.bold,
+                              fontSize: 21.sp,
+                              color: Colors.black54),
+                        ),
+                      ],
+                    ),
+                    Expanded(child: Container()),
+                    Icon(Icons.arrow_forward_ios),
+                  ],
+                ),
               ),
             ),
             SizedBox(
@@ -177,39 +185,34 @@ class Setting_page extends HookWidget {
             SizedBox(
               height: 15.h,
             ),
-            InkWell(
-              onTap: () {
-                Get.to(Update_userinfo());
-              },
-              child: Container(
-                margin: EdgeInsets.only(left: 20.w, right: 20.w),
-                child: Row(
-                  children: [
-                    Container(
-                      height: 50.h,
-                      width: 50.w,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.all(Radius.circular(40.r)),
-                      ),
-                      child: Icon(
-                        Icons.key_rounded,
-                        size: 40.sp,
-                        color: Colors.white,
-                      ),
+            Container(
+              margin: EdgeInsets.only(left: 20.w, right: 20.w),
+              child: Row(
+                children: [
+                  Container(
+                    height: 50.h,
+                    width: 50.w,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.all(Radius.circular(40.r)),
                     ),
-                    SizedBox(
-                      width: 30.w,
+                    child: Icon(
+                      Icons.key_rounded,
+                      size: 40.sp,
+                      color: Colors.white,
                     ),
-                    Text(
-                      "Change Password",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 22.sp),
-                    ),
-                    Expanded(child: Container()),
-                    Icon(Icons.arrow_forward_ios)
-                  ],
-                ),
+                  ),
+                  SizedBox(
+                    width: 30.w,
+                  ),
+                  Text(
+                    "Change Password",
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 22.sp),
+                  ),
+                  Expanded(child: Container()),
+                  Icon(Icons.arrow_forward_ios)
+                ],
               ),
             ),
             SizedBox(

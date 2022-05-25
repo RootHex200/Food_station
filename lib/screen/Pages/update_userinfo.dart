@@ -26,7 +26,7 @@ class Update_userinfo extends HookWidget {
               margin: EdgeInsets.only(left: 20.w, right: 20.w, top: 50.h),
               child: Center(
                   child: Text(
-                "Change your Password",
+                "Change your Details",
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
