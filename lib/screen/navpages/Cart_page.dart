@@ -73,7 +73,7 @@ class Cart_pages extends StatelessWidget {
                                   cartController.addtocart[index].docid!);
                             },
                             child: Container(
-                              height: 140.h,
+                              height: 150.h,
                               width: MediaQuery.of(context).size.width.w,
                               margin: EdgeInsets.only(
                                   left: 20.w, right: 20.w, bottom: 20.h),

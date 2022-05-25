@@ -4,6 +4,7 @@ import 'package:add_to_cart/Controller/Controller.dart';
 import 'package:add_to_cart/Controller/cart_controller.dart';
 import 'package:add_to_cart/Controller/favourite_controller.dart';
 import 'package:add_to_cart/Controller/auth_controller.dart';
+import 'package:add_to_cart/Controller/userinfo_controller.dart';
 import 'package:add_to_cart/screen/Pages/update_userinfo.dart';
 import 'package:add_to_cart/screen/Pages/login_page.dart';
 import 'package:add_to_cart/widgets/colors.dart';
@@ -20,6 +21,7 @@ class Setting_page extends HookWidget {
   @override
   Widget build(BuildContext context) {
     Controller controller = Get.put(Controller());
+    Userinfo userinfo = Get.put(Userinfo());
     final Auth_controller auth_controller = Get.put(Auth_controller());
     return Scaffold(
       body: SingleChildScrollView(
@@ -57,10 +59,12 @@ class Setting_page extends HookWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "Sabitur Rahman",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 25.sp),
+                      Obx(
+                        ()=>userinfo.user_info.length !=0? Text(
+                          userinfo.user_info[0].name!,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 25.sp),
+                        ):Text(""),
                       ),
                       Text(
                         "Edit personl details",

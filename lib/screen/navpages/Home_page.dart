@@ -193,7 +193,7 @@ class Home_pages extends StatelessWidget {
                 height: 10.h,
               ),
               Container(
-                height: 300.h,
+                height: 310.h,
                 width: MediaQuery.of(context).size.width,
                 margin: EdgeInsets.only(left: 10.h),
                 child: Obx(() => firestore_controller.products.length != 0

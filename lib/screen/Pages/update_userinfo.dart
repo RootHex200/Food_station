@@ -96,7 +96,7 @@ class Update_userinfo extends HookWidget {
                 if (userinfo.infoupdate.value) {
                   _showMyDialog(context, "checked.png",
                       "Credential Update successfully", " OK ");
-                  Future.delayed(Duration(milliseconds: 1), () {
+                  Future.delayed(Duration(seconds: 1), () {
                     Get.to(Mainpage());
                   });
                 } else {
