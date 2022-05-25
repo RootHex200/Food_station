@@ -1,6 +1,9 @@
-# add_to_cart
+# Food_station
 
-A new Flutter project.
+this is another practice project. in this project main focus was **good ui**, **responsive desing**,**statemanagement with getx**,**firebase**,**reusable code**
+and this project maybe update on future 
+
+watch this video of this project: https://drive.google.com/file/d/1EVK81kA_2k0Wg8k37O19fVakjgjjymHJ/view?usp=sharing
 
 ## Getting Started
 
